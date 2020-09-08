@@ -1,0 +1,117 @@
+<!-- 
+<block hidden="{{btnflag}}" wx:if="{{flag==''}}">
+<button disabled='{{disflag}}' type="primary" wx:if="{{canIUse}}" open-type="getUserInfo" style="background:{{bg}};border:none;" bindgetuserinfo="bindGetUserInfo"> {{btninfo}}</button>
+
+<view wx:else>请升级微信版本</view>
+</block> -->
+
+
+<view class="top">
+    <!-- <block  wx:if="{{flag!==''}}"> -->
+    <view class="header">
+            <!-- <image mode='widthFix' style='width:100rpx;border-radius:50%;' src="{{avatarUrl}}"></image> -->
+            <view class='userinfo-avatar' bindtap='myinfo'>
+                 <open-data type="userAvatarUrl"></open-data>
+            </view>           
+             <!-- <text>{{nickName}}</text> -->
+             <view>
+                    <open-data type="userNickName"></open-data> 
+             </view>                          
+
+    </view>
+   
+    <view class="myfriend">
+        <text catchtap="myfriends">关注</text><text>{{fansnum}}</text><text>|</text><text catchtap="myfans" >粉丝</text><text>{{friends}}</text>
+    </view>
+    <!-- </block> -->
+    <block wx:if="{{jf==''}}">
+    <view class="credit">
+        <view class="credit_con"><text class="left">积分:</text><text class="right">100</text></view>
+    </view>
+    </block>
+    <block wx:if="{{jf!=''}}">
+    <view class="credit">
+        <view class="credit_con"><text class="left">积分:</text><text class="right">{{jf}}</text></view>
+    </view>
+    </block>
+
+    <block wx:if="{{jf>=10000}}">
+    <view class="level">
+       <image class="img" src="../../images/level.png" mode='widthFix' style='width:30rpx;'></image> 等级3级         
+    </view>
+    </block>
+    <block wx:elif="{{jf>=5000}}">
+    <view class="level">
+       <image class="img" src="../../images/level.png" mode='widthFix' style='width:30rpx;'></image> 等级2级 
+      </view>
+    </block>
+    <block wx:elif="{{jf>100}}">
+    <view class="level">
+       <image class="img" src="../../images/level.png" mode='widthFix' style='width:30rpx;'></image> 等级1级 
+      </view>
+    </block>
+     <!-- <block wx:else>
+    <view class="level">
+       <image class="img" src="../../images/level.png" mode='widthFix' style='width:30rpx;'></image> 等级1级 
+      </view>
+    </block> -->
+
+</view>
+
+    
+<view bindtap='myinfo' class="con">
+<view class="left">
+     <image mode='widthFix' style='width:40rpx;padding:0 20rpx;' src="../../images/pscenter.png"></image>
+<text>个人信息</text>
+</view>
+<image class="right" mode='widthFix' style='width:30rpx;' src='../../images/enter.png'></image>
+</view>
+<view bindtap="givepro" class="con">
+<view class="left">
+     <image mode='widthFix' style='width:40rpx;padding:0 20rpx;' src="../../images/sharepro.png"></image>
+<text>分享物品</text>
+</view>
+<image class="right" mode='widthFix' style='width:30rpx;' src='../../images/enter.png'></image>
+</view>
+
+<view bindtap="getpro" class="con">
+<view class="left">
+     <image mode='widthFix' style='width:40rpx;padding:0 20rpx;' src="../../images/getpro.png"></image>
+<text>领取物品</text>
+</view>
+<image class="right" mode='widthFix' style='width:30rpx;' src='../../images/enter.png'></image>
+</view>
+
+<view bindtap="searchpro" class="con">
+<view class="left">
+     <image mode='widthFix' style='width:40rpx;padding:0 20rpx;' src="../../images/sousuo.png"></image>
+<text>寻找物品</text>
+</view>
+<image class="right" mode='widthFix' style='width:30rpx;' src='../../images/enter.png'></image>
+</view>
+
+<view bindtap="invitecode" class="con">
+<view class="left">
+     <image mode='widthFix' style='width:40rpx;padding:0 20rpx;' src="../../images/yaoqing.png"></image>
+<text>邀请特码</text>
+</view>
+<image class="right" mode='widthFix' style='width:30rpx;' src='../../images/enter.png'></image>
+</view>
+
+<view bindtap="rule" class="con">
+<view class="left">
+     <image mode='widthFix' style='width:40rpx;padding:0 20rpx;' src="../../images/guize1.png"></image>
+<text>公社规则</text>
+</view>
+<image class="right" mode='widthFix' style='width:30rpx;' src='../../images/enter.png'></image>
+</view>
+
+<view bindtap="advise" class="con">
+<view class="left">
+     <image mode='widthFix' style='width:40rpx;padding:0 20rpx;' src="../../images/huatong.png"></image>
+<text>有话要说</text>
+</view>
+<image class="right" mode='widthFix' style='width:30rpx;' src='../../images/enter.png'></image>
+</view>
+
+<view style='width:100%;height:50rpx;'></view>

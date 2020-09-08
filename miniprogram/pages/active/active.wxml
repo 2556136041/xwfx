@@ -1,0 +1,23 @@
+<!--pages/story/story.wxml-->
+
+<view style='position:relative;'>
+   <image class="bg" src='{{bg}}'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/active.png'></image>
+  
+</view>
+
+  <!-- <scroll-view scroll-y style="height:100%;" bindscrolltolower="lower" bindscrolltoupper="upper" hover-class="gray" scroll-with-animation='true' scroll-top='{{ topNum }}'>  -->
+<view style='border-bottom:2rpx solid lavender;padding-bottom:15rpx;'  hidden='{{!flag}}' wx:for="{{data}}" id="{{index}}" wx:key="i">
+        <view  id="{{item.id}}" bindtap="jumptoactivedetail" style='font-size:35rpx;margin-top:25rpx;text-align:left;padding-left:20rpx;'>
+        <!-- <text style="display:inline-block;width:50rpx;height:50rpx;line-height:50rpx;font-weight:600;border-radius:50%;background:lavender;text-align:center;">{{index+1}}</text> -->
+        <text style="padding-left:15rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{item.title}}</text></view>
+        <!-- <view style='font-size:35rpx;margin-top:25rpx;width:100%;'><image bindtap="jumptoactivedetail" id="{{item.id}}" style="width:100%;" src="https://www.51mfgs.com/public/static/images/active/{{item.activephoto}}"></image></view>
+        <view style='font-size:35rpx;margin:25rpx 0;text-align:right;padding-right:20rpx;'>发表时间：{{item.pubtime}}</view> -->
+
+</view>
+      <!-- <view class="loading" hidden="{{!loadingmore}}">加载更多...</view>
+      <view class="loading" hidden="{{!loadingend}}">加载完成</view> -->
+<!-- </scroll-view> -->
+
+
+

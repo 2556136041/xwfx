@@ -1,0 +1,65 @@
+/* pages/myinfo/myinfo.wxss */
+
+page{
+  background:rgba(240,240,240,1);
+  font-family: "黑体";
+}
+
+.con{
+   margin:50rpx auto;
+ 
+}
+
+.head{
+    border-bottom:2rpx solid rgba(200,200,200,.5);
+    margin-bottom:15rpx;
+    height: 100rpx;
+    padding:20rpx 0;
+    background: white;
+}
+
+.photoclass{
+    width: 47%;
+    height: 100rpx;
+    line-height: 100rpx;
+    float:left;
+    padding-left:3%;
+}
+.userinfo-avatar{
+     width:100rpx;
+     /* background: red; */
+     float:right;
+     padding-right:3%;
+}
+
+.li{
+    border-bottom:1rpx solid rgba(200,200,200,.5);
+    margin-bottom:15rpx;
+    height: 50rpx;
+    padding:20rpx 0;
+    background: white;
+}
+.li-system{
+    border-bottom:1rpx solid rgba(200,200,200,.5);
+    /* margin-bottom:15rpx; */
+    height: 50rpx;
+    padding:20rpx 0;
+    background: white;
+}
+
+.left{
+    width: 47%;
+    height: 50rpx;
+    line-height: 50rpx;
+    float:left;
+    text-align: left;
+    padding-left:3%;
+}
+.right{
+     width:47%;
+     height: 50rpx;
+     line-height: 50rpx;
+     float:right;
+     text-align: right;
+     padding-right:3%;
+}

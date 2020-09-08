@@ -1,0 +1,21 @@
+<!--pages/taketask/taketask.wxml-->
+
+
+<view style='position:relative;'>
+   <image class="bg" src='{{bg}}'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/ziyuan.png'></image>
+
+</view>
+
+<view>
+<!-- 寻物启事 -->
+<form bindsubmit="formSubmit">  
+   <input maxlength='20' bindfocus='focus' placeholder="昵称" type="text" name="username" value="{{searchinput}}" />  
+    <textarea bindfocus='focus' maxlength='200' placeholder="回复内容" name="answer" value="{{searchinput}}" /> 
+    <view class="btnbox">
+        <button disabled='{{btnflag}}' formType="submit" type='primary'> 回复 </button>
+    
+    </view>
+ </form>
+ </view>
+

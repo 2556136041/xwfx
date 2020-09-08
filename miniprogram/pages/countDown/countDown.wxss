@@ -1,0 +1,8 @@
+
+
+view {
+  text-align: center;
+  margin-top: 100rpx;
+  font-size: 30px;
+  color: #ff6600;
+}

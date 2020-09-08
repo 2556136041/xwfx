@@ -1,0 +1,87 @@
+/* pages/storydetail/storydetail.wxss */
+
+page{
+  font-family: "黑体";
+}
+.header{
+   width: 100%;
+   height: 50rpx;
+   line-height: 50rpx;
+   text-align: center;
+}
+.item{
+   font-size:25rpx;
+   margin-right:20rpx;
+   
+
+}
+.bottom{
+   width: 100%;
+   height: 50rpx;
+   line-height: 50rpx;
+   text-align: right;
+   padding-right: 30rpx;
+}
+.lead{
+   width:80%;
+   margin:10rpx auto;
+   background: rgba(200,200,200,.3);
+   font-size:26rpx;
+   text-align:justify;
+   text-indent:2em;
+   padding:15rpx;
+   border-radius:20rpx;
+}
+
+.tit_1{
+   font-size:35rpx;
+   text-align:center;
+   color:#338EDB;
+}
+.con{
+   font-size:26rpx;
+   text-align:justify;
+   text-indent:2em;
+   padding:20rpx;
+}
+.replay{
+   margin-top:20rpx;
+   margin-right:20rpx;
+   border:2rpx solid lavender;
+   background:lavender;
+   width:80%;
+   font-size:25rpx;
+   float:right;
+   border-radius:10rpx 10rpx 0 0;
+   padding:10rpx;
+}
+
+.ly{
+   width:80%;
+   /* background: red; */
+   hieght:auto;
+   clear:both;
+   margin: 25rpx auto;
+   font-size:29rpx;
+}
+
+input{
+  display: block;
+  width:80%;
+  height:60rpx;
+  padding:10rpx;
+  border:1px solid ; 
+  margin:20rpx auto; 
+  text-align: left;
+  border-radius: 10rpx;
+  border: 1px solid rgba(200,200,200,.5);
+}
+
+textarea{
+  border-radius: 10rpx;
+  width: 80%;
+  text-align: left;
+  border:1px solid rgba(200,200,200,.5);
+  margin:20rpx auto;
+  padding:10rpx;
+}

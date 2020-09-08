@@ -1,0 +1,25 @@
+
+
+<!-- <view>
+     <view>时间选择器</view>
+     <picker mode="date" start="1970-01-01" end="2018-12-31" value='{{time}}' bindchange="bindTimeChange">
+          <view>
+              当前选择：{{time}}
+          </view>
+     
+     </picker>
+
+
+</view> -->
+
+<view class="content">
+     <view class="type">
+          <view class="{{currentTab==0?'select':'default'}}" data-current="0" bindtap="switchNav">正在热映</view>
+          <view class="{{currentTab==1?'select':'default'}}" data-current="1" bindtap="switchNav">即将上映</view>
+      </view>
+<swiper current="{{currentTab}}" style='height:1500px;'>
+   <swiper-item>热映电影</swiper-item>
+   <swiper-item>热映电影</swiper-item>
+</swiper>    
+     
+</view>

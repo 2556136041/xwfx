@@ -1,0 +1,74 @@
+<!--pages/give/give.wxml-->
+
+<view style='position:relative;'>
+   <image class="bg" src='{{bg}}'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/share1.png'></image>
+
+</view>
+
+<block wx:if="{{data!==''}}">
+ <view class="count" style='text-indent:2em;line-height:40rpx;'>亲！截止目前你分享了<text style="color:red;">{{pronums}}</text>件/个物品，感谢你为绿色环保事业作出的杰出贡献!</view>
+<view class="backproinfo">
+       <!-- pro -->
+       
+      <view style="margin:20rpx 0 50rpx 0;" hidden='{{!flag}}' class="prosList" wx:for="{{data}}" id="{{index}}" wx:key="i">
+           <!-- del -->           
+          <!-- <view  id="{{item.pro_id}}" bindtap="delpro" class="del">
+          <image src="../../images/shanchu.png"></image>
+          </view> -->
+          
+          <view class="backcon">
+             
+              <view class='backpic'>
+                    <image  class="proimg" mode="widthFix" src="https://www.51mfgs.com/public/static/images/pro/{{item.pro_pic}}"></image> 
+              </view>
+              <view class="proabout">
+                    <text class='pubname'>{{item.pro_name}} </text> 
+                    <text class='about_item'>数量:{{item.number}}</text> 
+                    <text class='about_item'>剩余:{{item.number-(item.number-item.remainnum)}}</text>
+                     <text class='about_item'>浏览:{{item.hits}}</text>
+                    <text class='about_item'>点赞:{{item.points}}</text> 
+                    <block wx:if="{{item.setorder==1}}">
+                    状态:<text style='color:red' class='about_item'>已订</text>
+                    </block>
+                    <block wx:elif="{{item.setorder==0}}">
+                    状态:<text style="color:#3380EB;"  class='about_item'>未订</text>
+                    </block>
+              </view>
+               <view style='width:80%;height:1px;margin:20rpx auto;background:rgba(200,200,200,.5);'></view> 
+              <view>
+                    <view class="getinfo" wx:for="{{item.order}}" wx:for-item="cell" wx:for-index="cellindex" wx:key="j">                    
+                          <text class='ordername'>订户{{cellindex+1}}：{{cell.ordername}} </text> 
+                          <text class='getinfo_item'>手机：{{cell.orderlj}}</text> 
+                           <view  data-reply-phone="{{cell.orderlj}}" bindtap="phoneCall" style='text-align:right;padding-right:20%;position:absolute;top:10rpx;right:5%;'>
+                          <image mode='widthFix' style='width:60rpx;' src='../../images/phone.png'></image>
+                    </view>
+                          <text class='getinfo_item'>地址：{{cell.orderaddress}}</text>
+                          <text class='getinfo_item'>感谢的话：{{cell.ly}}</text> 
+                          <text class='getinfo_item' style='color:red;text-indent:2em;'>*请在投递快递前拨打领取者电话询问是否愿意承担到付费用，并告知大概金额，以免造成误会！</text> 
+                    </view>     
+              </view> 
+              <block wx:if="{{item.sendstate==0}}">
+              <view class="state">
+                  <button id="{{item.pro_id}}" bindtap='send' type='primary' size="mini">发货</button>              
+              </view>
+              </block>
+              <block wx:elif="{{item.sendstate==1}}">
+              <view class="state">
+                  <button disabled type='warn' size="mini">已发货</button>              
+              </view>
+              
+              </block>             
+              <view style='width:80%;height:1px;margin:20rpx auto;background:black;'></view>   
+            </view>
+      </view>    
+
+</view>
+
+</block>
+
+<block wx:elif="{{data==''}}">
+<view>还没有分享任何物品</view>
+</block>
+
+<view style='width:100%;height:200rpx;'></view>

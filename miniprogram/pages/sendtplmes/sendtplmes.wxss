@@ -1,0 +1,5 @@
+/* pages/sendtplmes/sendtplmes.wxss */
+
+input,picker{
+  margin-bottom:30rpx;
+}

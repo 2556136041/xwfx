@@ -1,0 +1,32 @@
+.con{
+  margin-top:30rpx;
+}
+
+.items{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 1px solid rgba(200,200,200,.5);
+  margin:30rpx 30rpx;
+  font-size: 28rpx;
+
+}
+
+input{
+  display: block;
+  width:70%;
+  height:auto;
+  padding:10rpx;  
+  text-align: left;
+  
+
+}
+/* textarea{
+  width:80%;
+  height:100rpx;
+  padding:10rpx;
+  margin:20rpx auto; 
+  text-align: left;
+
+} */

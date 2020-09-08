@@ -1,0 +1,15 @@
+/* pages/searchpro/searchpro.wxss */
+
+page{
+   font-family: "黑体";
+}
+.con{
+  width:80%;
+  margin: 20rpx auto;
+  height: auto;
+  padding:25rpx;
+  font-size:30rpx;
+}
+/* view{
+  margin:15rpx 0; 
+} */

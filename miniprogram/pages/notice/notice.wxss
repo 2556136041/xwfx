@@ -1,0 +1,5 @@
+/* pages/notice/notice.wxss */
+
+page{
+  font-family: "黑体";
+}

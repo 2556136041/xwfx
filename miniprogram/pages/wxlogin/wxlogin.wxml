@@ -1,0 +1,32 @@
+<view class='box' wx:if="{{showToast}}">
+  <view class='window'>
+    <view class='text'>
+      {{toastText}}
+    </view>
+  </view>
+</view>
+
+<!-- <image src="../../images/0.jpg"></image> -->
+<view class='login'>
+    <view class='user'>
+      <!-- <image src='../../images/name.png'></image> -->
+      <input bindblur='phoneBlur' type='number' maxlength="11" placeholder-class='placeholder' placeholder='请输入用户名(手机号)' auto-focus></input>
+    </view>
+
+    <!-- <view class='password'>
+      <image src='../../images/password.png'></image>
+      <input bindblur='psdBlur' placeholder-class='placeholder' placeholder='请输入密码'></input>
+    </view> -->
+
+    <view class='code'>
+      <!-- <image src='../../images/code.png'></image> -->
+      <input bindblur='code' type='number' placeholder-class='placeholder' placeholder='手机验证码'></input>
+
+      <button disabled='{{gainFlag}}' bindtap='gain'>{{key}}</button>
+    </view>
+
+    <view class='register'>
+      <button disabled='{{regFlag}}' bindtap='register' type='primary'>注册/登陆</button>      
+    </view>
+
+</view>

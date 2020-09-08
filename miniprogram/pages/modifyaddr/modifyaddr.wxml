@@ -1,0 +1,11 @@
+<!--pages/modifyaddr/modifyaddr.wxml-->
+
+ <view class="con" style='margin-top:30rpx;'>
+          <form bindsubmit="modifyaddr">  
+          <input maxlength='20' bindfocus='focus' placeholder="姓名" type="text" name="username" value="{{data.username}}" />           
+          <textarea bindfocus='focus' maxlength='50' placeholder="地址" name="address" value="{{data.address}}" /> 
+          <view class="btnbox">
+          <button disabled='{{btnflag}}' formType="submit" type='primary'> 修改 </button>    
+          </view>
+          </form>    
+  </view>

@@ -1,0 +1,91 @@
+<wxs module="phone"> 
+var toHide = function(array) {
+ var mphone = array.substring(0, 3) + '****' + array.substring(7); return mphone;
+  } 
+  module.exports.toHide = toHide; 
+</wxs>
+
+<!-- <view>
+   <image class="bg" src='https://www.51mfgs.com/public/static/images/miniprogram/classbg.png'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/caidan.png'></image>
+  
+</view> -->
+
+<view style='height: {{winHeight}}px;' class="detailbox">
+<view class="img">
+      <image bindtap="previewImage" data-src="https://www.51mfgs.com/public/static/images/pro/{{data.pro_pic}}"  class="proimg" mode="widthFix" src="https://www.51mfgs.com/public/static/images/pro/{{data.pro_pic}}"></image>
+</view>          
+      <view class="aboutpro" style="width:100%;height:auto;border-radius:30rpx;position:relative;top:-100rpx;background:white;">
+            <view class="tit">{{data.pro_name}}</view>
+            <view class="con"><text>类别：</text>
+            <block wx:if="{{data.pro_type=='jj'}}">
+            <text>居家</text>
+            </block>
+            <block wx:elif="{{data.pro_type=='sp'}}">
+            <text>私品</text>
+            </block>
+            <block wx:elif="{{data.pro_type=='sj'}}">
+            <text>书刊</text>
+            </block>
+            <block wx:elif="{{data.pro_type=='cw'}}">
+            <text>宠物</text>
+            </block>
+            <block wx:if="{{data.pro_type=='yw'}}">
+            <text>衣物</text>
+            </block>
+            </view>
+            <view class="con"><text>分享者：</text>{{data.username}}</view>
+            <view class="con"><text>时间：</text>{{data.pubtime}}</view>
+            <view class="con"><text>关于：</text>{{data.pro_about}}</view>
+            <!-- <view class="con"><text>条件：</text>{{data.pro_con}}</view> -->
+            <view class="con"><text>领取状态：</text>
+                <block wx:if="{{data.remainnum<=0}}">
+                    <text>已认领完</text>
+                    </block>
+                    <block wx:elif="{{data.remainnum>0}}">
+                    <text>还有{{data.number-(data.number-data.remainnum)}}件/个</text>
+                </block>
+            </view>
+            <view class='share'>
+                  <button open-type='share' size="mini" style='background:rgba(0,178,108,.5);padding-top:5px;'><image mode='widthFix' style="width:30rpx;margin-right:15rpx;" src='../../images/share1.png'></image><text>分享给朋友</text></button>    
+            </view>     
+
+            <view style='width:100%;height:2rpx;background:lavender;margin:30rpx auto;display:flex;flex-direction:row;justify-content:center;align-items:center;'></view>
+            <view style="font-size:35rpx;font-family:'Microsoft Yahei';text-indent:2em;color:#FF0000;"><image align="top" mode='widthFix' style="width:35rpx;" src='../../images/ganxie.png'></image>感谢的话：</view>
+            <view class="ly">
+            <block wx:if="{{data.order!==''}}">
+                  <view wx:for="{{data.order}}" wx:key="i">
+                      <text>{{phone.toHide(item.orderlj)}}:</text>
+                      <view style='text-indent:3em;padding:0 30rpx;'>{{item.ly}}</view>
+                  </view>
+            </block>
+            <block wx:else>
+                  <text>无</text>
+            </block>
+            </view>
+
+      </view>
+</view>
+
+<!-- 尾部 -->
+    <view class="bot">
+        <view class="bot_left" bindtap="turn">
+              <image mode='widthFix' style="width:50rpx;height:50rpx;line-height:100rpx;" src='../../images/return.png'></image>
+        
+        </view>
+        <view class="bot_mid"> 
+            <image mode='widthFix' style="width:50rpx;height:50rpx;line-height:100rpx;" src='../../images/look.png'></image><text>{{data.hits}}</text>
+            <image hidden='{{frontflag}}' bindtap="clickfront" mode='widthFix' style="width:50rpx;height:50rpx;line-height:100rpx;"   src='../../images/front.png'></image><text hidden='{{frontflag}}'>{{data.points}}</text>   
+            <image hidden='{{backflag}}' bindtap="clickback" mode='widthFix' style="width:50rpx;height:50rpx;line-height:100rpx;" src='../../images/back.png'></image><text hidden='{{backflag}}'>{{data.points+1}}</text>   
+        </view>
+    <block wx:if="{{data.remainnum<=0}}">
+        <view  disabled="{{btnflag}}" bindtap='enterorder0' class="bot_right setstatus">来晚了</view>
+    </block>
+    <block wx:elif="{{data.remainnum>0}}">
+        <view disabled="{{btnflag}}" bindtap='enterorder1' id="{{data.pro_id}}" class="bot_right getstatus">我要了</view>
+    </block>
+
+
+    </view>
+
+

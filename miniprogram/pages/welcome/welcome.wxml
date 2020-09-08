@@ -1,0 +1,12 @@
+<view class='container'>
+
+<image mode='widthFix' src="../../images/logo.jpg"></image>
+<block wx:for="{{boottitle}}" wx:key="i">
+<text class="motto">{{item.content}}</text>
+</block>
+<view catchtap='jumptoindex' class="start">
+<text>开启分享之旅</text>
+</view>
+
+</view>
+

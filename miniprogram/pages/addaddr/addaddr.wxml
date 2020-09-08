@@ -1,0 +1,25 @@
+
+
+ <view class="con" style='margin-top:30rpx;'>
+          <form bindsubmit="addmyaddr">  
+          <view class="items">
+              <text>用户姓名</text><input maxlength='20' bindfocus='focus' placeholder="名字" type="text" placeholder-style='color:rgb(220,220,220);' name="username" value="{{searchinput}}" />  <image mode='widthFix' style='width:50rpx;' src="../../images/user.png"></image>
+          </view>
+          <view class="items">
+                <text>选择地区</text> <input bindfocus='focus' maxlength='50' placeholder="地区信息" placeholder-style='color:rgb(220,220,220);' name="address0" value="{{searchinput?'地区信息':myaddr}}" />   <image bindtap="chooseaddr" mode='widthFix' style='width:50rpx;' src="../../images/dizhi.png"></image>          
+          </view>
+          <view class="items">
+                <text>详细地址</text> <input bindfocus='focus' maxlength='50' placeholder="街道门牌信息" placeholder-style='color:rgb(220,220,220);' name="address" value="{{searchinput}}" /> 
+          </view>            
+          <view class="btnbox">
+          <button disabled='{{btnflag}}' formType="submit" type='primary'> 提交 </button>    
+          </view>
+          </form>    
+  </view>
+
+<!-- <button type="primary" bindtap="choose">新增送货地址</button>
+<view hidden="{{viewflag}}">详情</view>
+<view hidden="{{viewflag}}">{{username}}</view>
+
+<view hidden="{{viewflag}}">{{myaddr}}</view> -->
+

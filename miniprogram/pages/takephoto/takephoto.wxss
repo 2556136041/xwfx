@@ -1,0 +1,25 @@
+/* pages/takephoto/takephoto.wxss */
+
+page{
+  font-family: "黑体";
+}
+.box{
+   padding: 20rpx;
+   line-height: 40rpx;
+}
+.tit1{
+  font-size:33rpx;
+  text-indent: 2em;
+
+}
+
+.tit2{
+  font-size:28rpx;
+  text-indent: 2em;
+}
+
+.con{
+  font-size:26rpx;
+  text-indent: 2em;
+  text-align: justify;
+}

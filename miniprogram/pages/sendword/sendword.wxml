@@ -1,0 +1,9 @@
+<!--pages/sendword/sendword.wxml-->
+
+<view style='position:relative;'>
+   <image class="bg" src='{{bg}}'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/mingxing.png'></image>
+  
+</view>
+
+<view style='font-size:28rpx;text-indent:2em;margin-top:25rpx;'>暂时没有开通</view>

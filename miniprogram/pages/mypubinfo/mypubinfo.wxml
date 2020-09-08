@@ -1,0 +1,59 @@
+
+
+<view class="top">
+    <block wx:if="{{is_friend==0}}">
+        <view id="{{phone}}" class="follow" bindtap='follow'>关注+</view>
+    </block>
+    <block wx:elif="{{is_friend==1}}">
+        <view id="{{phone}}" class="follow" bindtap='cancelfollow'>取消关注</view>
+    </block>
+    <view class="header">
+            <image mode='widthFix' style='width:100rpx;border-radius:50%;' src="{{photo}}"></image><text style="padding-left:10rpx;font-size:30rpx;">{{name}}</text>            
+
+    </view>
+   
+   <view class="myfriend">
+        <text catchtap="myfriends">关注</text><text>{{fansnum}}</text><text>|</text><text catchtap="myfans" >粉丝</text><text>{{friends}}</text>
+    </view>
+    <!-- </block> -->
+    <block wx:if="{{jf>=10000}}">
+    <view class="level">
+       <image class="img" src="../../images/level.png" mode='widthFix' style='width:30rpx;'></image> 等级3级         
+    </view>
+    </block>
+    <block wx:elif="{{jf>=5000}}">
+    <view class="level">
+       <image class="img" src="../../images/level.png" mode='widthFix' style='width:30rpx;'></image> 等级2级 
+      </view>
+    </block>
+    <block wx:elif="{{jf>100}}">
+    <view class="level">
+       <image class="img" src="../../images/level.png" mode='widthFix' style='width:30rpx;'></image> 等级1级 
+      </view>
+    </block>
+
+</view>
+<block wx:if="{{jf==''}}">
+<view class="credit">
+    <view class="credit_con"><text class="up">100</text><text class="down">积分</text></view>
+</view>
+</block>
+<block wx:if="{{jf!=''}}">
+<view class="credit">
+    <view class="credit_con"><text class="up">{{jf}}</text><text class="down">积分</text></view>
+</view>
+</block>
+    
+<view class="con">
+<text class="item">昵称：{{name}}</text>
+<text class="item">性别：{{sex}}</text>
+<text class="item">所在地：{{addr}}</text>
+</view>
+<view class="con">
+共捐献物品<text style="color:#3380EB;">{{sends}}</text>件/次
+</view>
+<view class="con">
+共领取物品<text style="color:#3380EB;">{{gets}}</text>件/次
+</view>
+
+

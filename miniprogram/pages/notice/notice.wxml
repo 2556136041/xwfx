@@ -1,0 +1,28 @@
+<!--pages/story/story.wxml-->
+
+<view style='position:relative;'>
+   <image class="bg" src='{{bg}}'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/notice.png'></image>
+  
+</view>
+<!-- <block wx:if="data==''">
+<view style="padding:30rpx;">暂无</view>
+</block>
+<block wx:else> -->
+  <!-- <scroll-view scroll-y style="height:100%;" bindscrolltolower="lower" bindscrolltoupper="upper" hover-class="gray" scroll-with-animation='true' scroll-top='{{ topNum }}'>  -->
+
+
+
+<view style='border-bottom:2rpx solid lavender;padding-bottom:15rpx;'  hidden='{{!flag}}' wx:for="{{data}}" id="{{index}}" wx:key="i">
+        <view  id="{{item.id}}" bindtap="jumptonoticedetail" style='font-size:35rpx;margin-top:25rpx;text-align:left;padding-left:20rpx;'>
+        <!-- <text style="display:inline-block;width:50rpx;height:50rpx;line-height:50rpx;font-weight:600;border-radius:50%;background:lavender;text-align:center;">{{index+1}}</text> -->
+        <text style="padding-left:15rpx;">{{item.title}}</text></view>
+</view>
+
+      <!-- <view class="loading" hidden="{{!loadingmore}}">加载更多...</view>
+      <view class="loading" hidden="{{!loadingend}}">加载完成</view> -->
+<!-- </scroll-view> -->
+<!-- </block> -->
+
+
+

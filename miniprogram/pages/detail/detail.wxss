@@ -1,0 +1,121 @@
+page{
+  
+  font-family: "黑体";
+
+}
+
+.bg{
+   width:100%;
+   height:100rpx;
+   opacity:0.5;
+}
+.icon{
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-top:-30rpx;
+  z-indent:100;
+}
+.detailbox{
+  width: 100%;
+  height: 100%;
+
+}
+.tit{
+  font-size:30rpx;
+  text-align: center;
+  color:#3380EB;
+  overflow: visible;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-top:20rpx;
+
+}
+
+.proimg{
+  width: 100%;
+  margin: 10rpx auto;
+}
+
+.con{
+  text-align: justify;
+  text-indent: 2em;
+  padding:0px 15rpx;
+  font-size: 30rpx;
+}
+
+.ly{
+  margin-top:30rpx;
+  font-size: 28rpx;
+  /* background:lavender; */
+  text-align: justify;
+  text-indent: 2em;
+  /* color:#3380EB; */
+  margin-bottom: 100px;
+  padding-bottom:100rpx;
+
+
+} 
+.bot{
+  width: 100%;
+  height: 100rpx;
+  z-index: 100;
+  /* background:lavender; */
+  background:white; 
+  border-top:1rpx solid rgba(200,200,200,0.2);
+  position:fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.bot_left{
+  width:15%;
+  height: 100rpx;
+  float:left;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.bot_mid{
+  width:55%;
+  height: 100rpx;
+  float:left;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size:26rpx;
+
+}
+.bot_mid image,.bot_mid image text{
+    margin-left:50rpx;
+}
+.bot_right{
+  width:30%;
+  height: 100rpx;  
+  float:right;
+  font-family: "Microsoft Yahei";
+  font-size: 35rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color:white;
+  maring:0;
+  padding: 0;
+}
+.setstatus{
+  background: red;
+  
+}
+
+.getstatus{
+   background: green;
+  
+}
+
+.share{
+   margin:20rpx 0;
+   text-align: center;
+   padding-right:30rpx;
+}

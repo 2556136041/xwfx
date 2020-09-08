@@ -1,0 +1,88 @@
+{
+  "cloud": true,
+  "debug":true,
+  "pages": [  
+    "pages/welcome/welcome",    
+    "pages/order/order",    
+    "pages/addaddr/addaddr",
+    "pages/sendtplmes/sendtplmes",  
+    "pages/index/index", 
+    "pages/detail/detail",
+    "pages/search/search",       
+    "pages/test/test",
+    "pages/get/get",
+    "pages/pub/pub",    
+    "pages/myaddress/myaddress",    
+    "pages/my/my",
+    "pages/getlocation/getlocation",
+    "pages/wxlogin/wxlogin",
+    "pages/modifyaddr/modifyaddr",    
+    "pages/sp/sp",
+    "pages/catchuserinfo/catchuserinfo",  
+    "pages/pubmyfindpro/pubmyfindpro",    
+    "pages/taketask/taketask",  
+    "pages/cw/cw", 
+    "pages/mypubinfo/mypubinfo",
+    "pages/myfriends/myfriends",
+    "pages/myfans/myfans",
+    "pages/rule/rule",    
+    "pages/advise/advise",
+    "pages/delimg/delimg",
+    "pages/give/give", 
+    "pages/searchpro/searchpro",    
+    "pages/yw/yw",
+    "pages/sj/sj", 
+    "pages/jj/jj",
+    "pages/loading/loading",
+    "pages/myinfo/myinfo",
+    "pages/takephoto/takephoto",
+    "pages/notice/notice",
+    "pages/noticedetail/noticedetail",
+    "pages/active/active",
+    "pages/activedetail/activedetail",
+    "pages/story/story",
+    "pages/storydetail/storydetail",
+    "pages/reportdetail/reportdetail",
+    "pages/sendword/sendword",
+    "pages/send/send",
+    "pages/del/del",    
+    "pages/invitecode/invitecode",  
+    "pages/countDown/countDown",       
+    "pages/cart/cart",
+    "pages/sort/sort",
+    "pages/logs/logs",
+    "pages/bussiness/bussiness"
+    
+  ],
+  "window": {
+    "backgroundColor": "#F47050",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F47050",
+    "navigationBarTitleText": "闲物分享(免费公社)",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/index.png",
+        "selectedIconPath": "./images/indexFull.png"
+      },
+      {
+        "pagePath": "pages/pub/pub",
+        "text": "发布",
+        "iconPath": "./images/pub.png",
+        "selectedIconPath": "./images/pub1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/my.png",
+        "selectedIconPath": "./images/myFull.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+
+
+<button bindtap='begin' type='warn'>开抢</button>
+
+<view>{{time}}</view>

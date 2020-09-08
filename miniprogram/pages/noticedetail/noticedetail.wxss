@@ -1,0 +1,26 @@
+/* pages/noticedetail/noticedetail.wxss */
+
+.photo{
+  width: 90%;
+  margin: 20rpx auto;
+}
+.photo image{
+  width: 100%;
+}
+.con{
+  margin:30rpx auto;
+  font-size:28rpx;
+  font-family: "黑体";
+  text-align: justify;
+  text-indent: 2em;
+  padding:0 20rpx;
+  line-height: 40rpx;
+}
+
+.time{
+  font-size:28rpx;
+  font-family: "黑体";
+  text-align: right;
+  padding:0 20rpx;
+}
+

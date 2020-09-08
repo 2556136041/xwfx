@@ -1,0 +1,28 @@
+<!--pages/give/give.wxml-->
+<view style='position:relative;'>
+   <image class="bg" src='{{bg}}'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/findpro.png'></image>
+</view>
+
+<block wx:if="{{data!==''}}">
+<view class='con' wx:for="{{data}}" bindtap="detail" id="{{index}}" wx:key="i">
+      <view style="font-size:30rpx;">任务{{index+1}}:{{item.proname}}</view>
+      <view style='text-align:right;padding-right:50rpx;'>发布时间：{{item.createtime}}</view>
+      <view>
+          <view style="font-size:26rpx;width:80%;margin:10rpx auto;border-bottom:1px solid lavender;padding:20rpx 0;position: relative;" wx:for="{{item.task}}" wx:for-item="cell" wx:for-index="cellindex" wx:key="j">                    
+                <view><text style="font-weight:600;">回复{{cellindex+1}}：</text>{{cell.taskusername}} </view> 
+                <view><text style="font-weight:600;">手机：</text>{{cell.user_phone}}</view> 
+                 <view  data-reply-phone="{{cell.user_phone}}" bindtap="phoneCall" style='text-align:right;padding-right:20%;position:absolute;bottom:90rpx;right:30rpx;'>
+                          <image mode='widthFix' style='width:60rpx;' src='../../images/phone.png'></image>
+                    </view>
+                <view><text style="font-weight:600;">内容：</text>{{cell.answer}}</view>
+                <view><text style="font-weight:600;">时间：</text>{{cell.answertime}}</view> 
+          </view>     
+      </view> 
+
+
+</view>
+</block>
+<block wx:elif="{{data==''}}">
+<view>还没有发出物品通辑令</view>
+</block>

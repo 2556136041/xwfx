@@ -1,0 +1,33 @@
+ <!--pages/myaddress/myaddress.wxml-->
+
+<view class="con">
+<block wx:if="{{data!==''}}">
+    <radio-group bindchange="radioChange">
+          <block wx:for="{{data}}" wx:key="i">
+             <view class="item" style='margin-top:50rpx;'>  
+             <label>          
+                  <view style='width:80%;margin-bottom:50rpx;' class="left">
+                      <radio value="{{item.id}}" /><text>{{item.username}},{{item.userid}},{{item.address}}</text>
+                  </view>
+             </label>  
+                  <image id="{{item.id}}" bindtap="modify" class="right" mode='widthFix' style='width:50rpx;display:inline-block;' src="../../images/bianjidizhi.png"></image>            
+             </view>  
+             <view style="width:100%;height:30px;"></view>             
+         </block>    
+    </radio-group>
+</block>
+<block wx:else>
+   <view>你还没有任何地址信息！</view>
+</block>
+
+</view>
+
+<view class="add" bindtap = "addAddre" bindtap="add">
+   <view class="left">
+      <image mode='widthFix' style='width:50rpx;' src = "../../images/add2.png"
+        mode = "widthFix" />新增个人地址
+   </view>
+   <view class="right"><image mode='widthFix' style='width:30rpx;' src="../../images/enter.png"></image></view>
+</view>
+
+

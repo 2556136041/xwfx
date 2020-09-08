@@ -1,0 +1,26 @@
+/* pages/myfans/myfans.wxss */
+
+
+.friend,.fans{
+  width: 100%;
+  height:auto;
+  margin:60rpx 0rpx; 
+  padding:30rpx;
+  /* background: red; */
+}
+
+.tit{
+  margin:20rpx; 
+}
+.show{
+  width:100%;
+  height: auto;
+}
+.show image{
+  display: block;
+  float: left;
+}
+.wz{
+  font-size: 28rpx;
+  text-indent: 2em;
+}

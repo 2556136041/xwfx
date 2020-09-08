@@ -1,0 +1,10 @@
+
+
+<view style='position:relative;'>
+   <image class="bg" src='https://www.51mfgs.com/public/static/images/miniprogram/classbg.png'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/invite.png'></image>
+</view>
+
+<view style="padding:20rpx;font-size:28rpx;">
+暂时没有发起和收到邀请码
+</view>

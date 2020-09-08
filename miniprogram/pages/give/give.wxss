@@ -1,0 +1,80 @@
+/* pages/give/give.wxss */
+page{
+  font-size:28rpx;
+  font-family: "黑体";
+  /* padding: 30rpx 10rpx; */
+}
+
+/* .prosList{
+  padding:20rpx 0;
+  border-bottom:1px solid rgb(100,100,100);
+} */
+.backpic{
+  width: 100%;
+}
+.count{
+  padding:0 0 15rpx 15px;
+  margin-top:30rpx;
+}
+.backpic image{
+  width: 80%;
+  display: block;
+  margin: 15rpx auto;
+  border-radius: 50rxp;
+}
+.proabout{
+  width:90%;
+  /* margin:10rpx auto; */
+  /* border-bottom: 1px solid rgba(200,200,200,.5); */
+  padding:0 0 15rpx 15px;
+
+}
+.getinfo{
+  padding:0 0 15rpx 15px;
+  position: relative;
+  
+}
+.proabout,.getinfo{
+  width:100%;
+  margin: 15rpx auto;
+  background: white;
+  display: block;
+}
+
+.ordername,.pubname{
+  display: block;
+  text-align:left;
+  font-weight: 800;
+  margin-bottom:20rpx;
+}
+.about_item{
+  padding-right: 15rpx;
+}
+.getinfo_item{
+  display: block;
+  padding:0 10%;
+  text-align: justify;
+  margin-top:10rpx;
+  line-height: 40rpx;
+
+}
+
+.state{
+  text-align: center;
+}
+
+.del{
+   width:100%;
+   height: 80rpx;
+   text-align: right;
+   
+   /* float:right; */
+
+}
+
+.del image{
+   width:80rpx;
+   height: 80rpx;
+   padding-right: 20rpx;
+   
+}

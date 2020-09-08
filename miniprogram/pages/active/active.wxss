@@ -1,0 +1,6 @@
+/* pages/active/active.wxss */
+
+
+page{
+   font-family: "黑体";
+}

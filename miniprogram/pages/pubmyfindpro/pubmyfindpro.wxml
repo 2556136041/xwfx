@@ -1,0 +1,53 @@
+<!--pages/pubmyfindpro/pubmyfindpro.wxml-->
+<wxs module="phone"> 
+var toHide = function(array) {
+ var mphone = array.substring(0, 3) + '****' + array.substring(7); return mphone;
+  } 
+  module.exports.toHide = toHide; 
+</wxs>
+
+<view style='position:relative;'>
+   <image class="bg" src='{{bg}}'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/ziyuan.png'></image>
+
+</view>
+
+<view style='position:relative;margin-top:30rpx;width:100%;height:auto;padding:20rpx;'>
+        <block wx:if="{{data!==''}}">
+        <view style="padding:30rpx;border-bottom:2rpx solid rgba(200,200,200,.5)" class='findorder' wx:for="{{data}}" wx:key="i">
+        <view style="display:flex;flex-direction:row;justify-content:left;align-items:center;"><image id="{{item.user_phone}}" bindtap="lookuser"  mode='widthFix' style='width:60rpx;border-radius:50%;' src='{{item.wxuser.photo}}'></image><text style="padding-left:15rpx;">{{item.wxuser.nickname}}</text></view>
+        <view style='text-align:center;font-size:30rpx;font-weight:600;padding:15rpx 0;'>{{item.proname}}</view>
+        <view class="con">心语星愿：{{item.content}}</view>
+        <view style="text-align:right;padding-right:40rpx;">{{item.createtime}}</view> 
+        <view id="{{item.id}}" bindtap='taketask' style='color:rgb(0,178,106);text-align:center;width:20%;height:40rpx;line-height:40rpx;border:1px solid rgb(100,100,100);border-radius:25rpx;position:relative;right:-60%;margin-top:25rpx;'>领取任务</view>
+        <view style='width:90%;margin-right:30rpx;'>              
+               <view style='width:80%;position:relative;left:100rpx;background:rgba(240,240,240,1);margin:30rpx;border-radius:20rpx;padding:20rpx;' wx:for="{{item.task}}" wx:for-item="cell" wx:key="j">
+                  <view>{{cell.taskusername}}:</view>
+                  <view>{{cell.answer}}</view>
+                  <view>{{cell.answertiem}}</view>            
+            </view>       
+        </view>       
+
+        </view>
+        </block>
+        <block wx:else>
+        <view>还没有人发寻物启事及领取任务</view>
+        </block>
+        
+</view>
+
+<view style='clear:both;width:100%;height:50rpx;'></view>
+
+<view style='position:relative;margin-top:50rpx;clear:both;'>
+
+<!-- 寻物启事 -->
+<view style="width:80%;margin:15rpx auto;">发布我的寻物启事：</view>
+<form bindsubmit="formSubmit">  
+   <input maxlength='20' bindfocus='focus' placeholder="物品名称" type="text" name="proname" value="{{searchinput}}" />  
+    <textarea bindfocus='focus' maxlength='200' placeholder="心语星愿" name="reason" value="{{searchinput}}" /> 
+    <view class="btnbox">
+        <button disabled='{{btnflag}}' formType="submit" type='primary'> 提交 </button>
+    
+    </view>
+ </form>
+ </view>

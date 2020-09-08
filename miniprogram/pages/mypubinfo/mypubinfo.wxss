@@ -1,0 +1,146 @@
+/* pages/mypubinfo/mypubinfo.wxss */
+
+/* pages/my/my.wxss */
+
+page{
+  /* background:lavender; */
+  background:rgba(240,240,240,1);
+  font-family: "黑体";
+}
+
+.top{
+  width:100%;
+  height:200rpx;
+  background: #F47050;
+  position: relative;
+  /* border-bottom: 5rpx solid gray; */
+}
+
+.follow{
+  width: 150rpx;
+  height: 40rpx;
+  border: 1px solid black;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 40rpx;
+  position: absolute;
+  right: 40rpx;
+  top:20rpx;
+  font-size:28rpx;
+}
+.header{
+  width:100px;
+  height: 50px;
+  position: absolute;
+  left:50rpx;
+  bottom:70rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* .header image{
+  margin-right:20rpx;
+  
+}
+.header text{
+  font-size:50rpx;
+  color:white;
+  
+} */
+
+.userinfo-avatar {
+  overflow:hidden;
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  /* margin: 20rpx;
+  margin-top: 50rpx; */
+  margin-right: 20rpx;
+  border-radius: 50%;
+  /* border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); */
+}
+
+.myfriend{
+  position: absolute;
+  left:50rpx;
+  bottom:20rpx;
+  font-size:30rpx;
+}
+
+.myfriend text{
+  margin-right: 10rpx;
+  color:white;
+  font-size:30rpx;
+}
+.level{
+  position:absolute;
+  right: 50rpx;
+  bottom:25rpx;
+  font-size:25rpx;
+  padding: 5rpx 15rpx;
+  background:white;
+  border-radius:10rpx; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.img{
+  padding-right: 10rpx;
+}
+.credit{
+  /* background: red; */
+  margin: 20rpx auto;
+  /* height: 100rpx; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.credit text{
+  display: block;
+  
+}
+.up{
+  width:80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #F47050;
+  line-height: 80rpx;
+  font-size:30rpx;
+  text-align: center;
+  color:white;
+  font-weight: 800;
+  border:5rpx solid white;
+  padding:10rpx;
+}
+.down{
+  font-size:30rpx;
+  text-align: center;
+
+}
+
+.con{
+  width: 100%;
+  height: auto;
+  /* background: white; */
+  margin-bottom: 20rpx;
+  font-size:30rpx;
+  padding: 20rpx 0;
+  text-indent: 2em;
+  border-bottom:2rpx solid rgba(200,200,200,.5);
+
+}
+
+.item{
+ display: block;
+ text-align: left;
+ left:30rpx;
+ text-indent: 2em;
+ font-size:30rpx;
+}

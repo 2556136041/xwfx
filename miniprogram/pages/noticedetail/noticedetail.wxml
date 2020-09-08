@@ -1,0 +1,9 @@
+<view style='position:relative;'>
+     <view style='font-size:40rpx;margin-top:25rpx;text-align:center;'>{{data.title}}</view>
+     <block wx:if="{{data.photo!=''}}">
+       <view class="photo"><image bindtap="previewImage" data-src="https://www.51mfgs.com/public/static/images/notice/{{data.photo}}"  mode='widthFix' style="width:100%;"  src="https://www.51mfgs.com/public/static/images/notice/{{data.photo}}"></image></view>   
+      </block>     
+      <view class="con">{{data.content}}</view>        
+      <view class="time">{{data.pubtime}}</view>
+</view>
+ 

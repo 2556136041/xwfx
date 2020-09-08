@@ -1,0 +1,50 @@
+
+page{    
+    position: relative;
+    font-size:32rpx;
+}
+.container{
+  margin-top:50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+image{
+  width:300rpx;
+  height:300rpx; 
+  border-radius: 50%;
+  animation:myfirst 2s ease 1s infinite;
+}
+
+@keyframes myfirst
+{
+    0% {opacity:0;}
+    10% {opacity:0.1;}
+    20% {opacity:.3;}
+    30% {opacity:.5;}
+    40% {opacity:.7;}
+    50% {opacity:.9;}
+    60% {opacity:1;}
+    70% {opacity:1;}
+    80% {opacity:1;}
+    90% {opacity:0;}
+    100% {opacity:0;}
+}
+
+.motto{
+   margin-top:100rpx;
+   font-szie:35rpx;
+}
+
+.start{
+  margin-top:300rpx;
+  font-size:28rpx;
+  border:1px solid #F47050;
+  width:300rpx;
+  height: 80rpx;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 80rpx;
+
+}

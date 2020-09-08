@@ -1,0 +1,19 @@
+<!--pages/myfans/myfans.wxml-->
+
+<view style='position:relative;'>
+   <image class="bg" src='https://www.51mfgs.com/public/static/images/miniprogram/classbg.png'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/pengyouquan.png'></image>
+</view>
+
+<view class="friend">
+<view class="tit">我关注的</view>
+<block wx:if="{{friends==''}}">
+<view class='wz'>你还没有关注的</view>
+</block>
+<block wx:else>
+<view bindtap="lookfollowinfo" class="show" wx:for="{{friends}}" wx:key="i">
+<image id="{{item.myfriend.user_phone}}" mode='widthFix' style="width:100rpx;border-radius:50%;" src="{{item.myfriend.photo}}"></image>
+
+</view>
+</block>
+</view>

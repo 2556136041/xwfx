@@ -1,0 +1,23 @@
+
+<!-- 头部 -->
+<view style='position:relative;'>
+   <image class="bg" src='https://www.51mfgs.com/public/static/images/miniprogram/classbg.png'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/succeed.png'></image>
+  
+</view>
+<view style='position:relative;'>
+
+<!-- 订单 -->
+<form bindsubmit="formSubmit" report-submit='true'>  
+   <input maxlength='10' bindfocus='focus' placeholder="联系人" type="text" name="ordername" value="{{searchinput}}" /> 
+   <!-- <input maxlength='11' bindfocus='focus' placeholder="手机号" type="number" name="orderlj" value="{{searchinput}}" /> -->
+   <input maxlength='100' bindfocus='focus' placeholder="地址" type="text" name="orderaddress" value="{{useraddress}}" /> 
+    <textarea bindfocus='focus' maxlength='150' placeholder="感谢的话,150字以内" name="ly" value="{{searchinput}}" /> 
+    <!-- <view class="address" bindtap='selectaddr'><image mode='widthFix' style="width:50rpx;padding-right:10rpx;" src="../../images/selectaddr.png" ></image><text>选择您的位置</text></view>
+   <view style='width:80%;margin:20rpx auto;'>{{myaddr}}</view> -->
+     <view style="font-size:30rpx;color:red;text-align:center;margin:40rpx 0rpx;" hidden='{{sendmesflag}}'>请随时关注我主页物品发送情况</view>
+    <view class="btnbox">
+        <button disabled='{{btnflag}}' formType="submit" type='primary'> 提交 </button>    
+    </view>
+ </form>
+ </view>

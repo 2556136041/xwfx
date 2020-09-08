@@ -1,0 +1,19 @@
+<!--pages/myfans/myfans.wxml-->
+
+<view style='position:relative;'>
+   <image class="bg" src='https://www.51mfgs.com/public/static/images/miniprogram/classbg.png'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/fans.png'></image>
+</view>
+
+<view class="fans">
+<view class="tit">我的粉丝</view>
+<block wx:if="{{fans==''}}">
+<view class='wz'>你还没有粉丝</view>
+</block>
+<block wx:else>
+<view bindtap="lookfollowinfo" class="show" wx:for="{{fans}}" wx:key="i">
+<image id="{{item.myfans.user_phone}}" mode='widthFix' style="width:100rpx;border-radius:50%;" src="{{item.myfans.photo}}"></image>
+</view>     
+</block>
+</view>
+

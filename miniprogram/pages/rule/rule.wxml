@@ -1,0 +1,66 @@
+
+<view style='position:relative;'>
+   <image class="bg" src='https://www.51mfgs.com/public/static/images/miniprogram/classbg.png'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/guize.png'></image>
+</view>
+
+<view class="con">
+<text class="tit">快乐原则</text>
+<text class="item">随时随地，分享物品</text>
+</view>
+
+<view class="con">
+<text class="tit">发布流程</text>
+<text class="item">1、免费注册成为会员;</text>
+<text class="item">2、免费发布《=》领取;</text>
+<text class="item">3、原则上实行到付，由领取方支付物流快递费用。</text>
+</view>
+
+<view class="con">
+<text class="tit">达人主张</text>
+<text class="tit1">积分计划</text>
+<text class="item">1、基础分100分;</text>
+<text class="item">2、分享一次20分。</text>
+<text class="item">3、发布一次物品100分。</text>
+<text class="item">4、发布一次话题200分。</text>
+
+<text class="tit1">达人级别</text>
+<text class="item">积满1000分以上即设为“分享达人”。</text>
+<text class="item">5000分以上为“分享超人”。</text>
+<text class="item">10000分以上为“分享大V”。</text>
+
+</view>
+
+<view class="con">
+<text class="tit">奖励计划</text>
+<text class="item">1、在首页分批对“分享达人”进行展示。</text>
+<text class="item">2、颁发年度分享达人黄金荣誉勋章，由商家赞助</text>
+</view>
+
+<view class="con">
+<text  class="tit">纠纷解决</text>
+<text class="item">1、除了双方协商的快递费用外，其他任何收费都属违规行为，遇到有索要收费行为可向平台举报，一经查实即列入“黑名单”。</text>
+<text class="item">2、交换过程中出现纠纷，请遵照“友好”、“协商”的原则解决分歧和争执，如解决不了可以交平台裁决，平台对过失方进行封号处理。</text>
+<text class="item">3、针对出现的违法犯罪行为，交公安机关处理。</text>
+</view>
+
+<view class="con">
+<text  class="tit">发展大计</text>
+<text class="item">1、以类目（家具、家电、服装、私品、书刊等）作为纵向分类。</text>
+<text class="item">2、以地区作为横向分类，先期在北上广深等一线城市开设城市交换空间，后期争取覆盖所有大中城市。</text>
+
+</view>
+
+<view class="con">
+<text  class="tit">协同共作</text>
+<text class="item">1、寻找志同道合的程序员负责平台开发、管理，聘请有爱心的企业家担任顾问。</text>
+<text class="item">2、发动各种社会力量担任宣传员，参与宣传闲置物品分享、循环利用的理念，组织同学之间、社团之间、邻里间的物品交流活动。</text>
+<text class="item" style="color:red;">有意加入本站的志愿者可发邮件至wsndwr@126.com</text>
+</view>
+
+<view class="con">
+<text  class="tit">安全事项</text>
+<text class="item">1、尽量避免物品当面转交，如需上门需有朋友及家人陪伴。</text>
+<text class="item">2、投递物品前，最好先电话联系，确定地址无误后再投递。</text>
+<text class="item">3、杜绝发布危险有害身心健康的物品，一经发现将追究法律责任。</text>
+</view>

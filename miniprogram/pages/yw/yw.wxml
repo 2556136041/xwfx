@@ -1,0 +1,129 @@
+<wxs module="phone"> 
+var toHide = function(array) {
+ var mphone = array.substring(0, 3) + '****' + array.substring(7); return mphone;
+  } 
+  module.exports.toHide = toHide; 
+</wxs>
+
+<view style='position:relative;'>
+   <image class="bg" src='{{bg}}'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/5.png'></image>  
+</view>
+
+<scroll-view scroll-y style="height:100%;" bindscrolltolower="lower" bindscrolltoupper="upper" hover-class="gray" enable-back-to-top="true" scroll-with-animation='true' scroll-top='{{topNum}}'>
+ <!-- <button class='toindex' type='' size='mini' bindtap="toindex"></button> -->
+<!-- pro -->
+
+<view hidden='{{!flag}}' class="prosList" class="content">
+      <view class="left">
+        <block wx:for="{{data}}" wx:key="i">
+            <block wx:if="{{index%2==0 && item.pro_pic!==''}}">
+             <view class="picbox">
+               <image id="{{item.pro_id}}" bindtap='detail' class="proimg" mode="widthFix" src="https://www.51mfgs.com/public/static/images/pro/{{item.pro_pic}}"></image> 
+<!-- 
+                    <view  class="usershow" >       
+                    <image id="{{item.wxuser.user_phone}}" catchtap="lookuser" class="userphoto" src="{{item.wxuser.photo}}"></image><text class="username">{{item.wxuser.nickname}}</text> 
+                    </view>
+
+                    <view  class="love" >       
+                    <text class="lovehits">{{item.hits}}</text> <image id="{{item.hits}}" class="loveangle" src="../../images/xin1.png"></image>
+                    </view>
+              
+          </view> -->
+                
+          <view class="firstline">
+                <view class='proname'>{{item.pro_name}} </view> 
+                <view class='looknums'><text class="lovehits">{{item.hits}}</text> <image id="{{item.hits}}" class="loveangle" src="../../images/xin1.png"></image></view>
+                <!-- <view class="city">{{item.city}}</view>             -->
+            </view>
+            
+            <view class="about">
+            <block wx:if="{{item.user_dig==0}}">                
+                  <view class="tel">{{phone.toHide(item.tel)}}</view>
+            </block>
+            <block wx:elif="{{item.user_dig==1}}">  
+                  <view class="dig">商家馈赠</view>
+            </block>               
+                  <view class='pronum'>数量{{item.number}}</view>                
+            </view>   
+            <view class='procutline'></view>
+             <view  class="usershow" > 
+                <view class="userinfo">       
+                    <image id="{{item.wxuser.user_phone}}" catchtap="lookuser" class="userphoto" src="{{item.wxuser.photo}}"></image><text class="username">{{item.wxuser.nickname}}</text> 
+                </view>
+                <view class="city">{{item.city}}</view>   
+            </view>   
+            <!-- <view class="procutline"></view> -->
+             </view> 
+            </block>
+            
+        </block>
+        <!-- add -->
+        <block wx:if="{{counts%2==0}}">
+        <image bindtap='pub' class="proimg" mode="widthFix" src="../../images/addpro.png" ></image>  
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{data}}" wx:key="i">
+             <block wx:if="{{index%2==1 && item.pro_pic!==''}}">
+             <view class="picbox">
+               <image id="{{item.pro_id}}" bindtap='detail' class="proimg" mode="widthFix" src="https://www.51mfgs.com/public/static/images/pro/{{item.pro_pic}}"></image> 
+
+                    <!-- <view  class="usershow" >       
+                    <image id="{{item.wxuser.user_phone}}" catchtap="lookuser" class="userphoto" src="{{item.wxuser.photo}}"></image><text class="username">{{item.wxuser.nickname}}</text> 
+                    </view>
+
+                    <view  class="love" >       
+                    <text class="lovehits">{{item.hits}}</text> <image id="{{item.hits}}" class="loveangle" src="../../images/xin1.png"></image>
+                    </view>
+              
+          </view> -->
+                
+          <view class="firstline">
+                <view class='proname'>{{item.pro_name}} </view> 
+                <view class='looknums'><text class="lovehits">{{item.hits}}</text> <image id="{{item.hits}}" class="loveangle" src="../../images/xin1.png"></image></view>
+                <!-- <view class="city">{{item.city}}</view>             -->
+            </view>
+            
+            <view class="about">
+            <block wx:if="{{item.user_dig==0}}">                
+                  <view class="tel">{{phone.toHide(item.tel)}}</view>
+            </block>
+            <block wx:elif="{{item.user_dig==1}}">  
+                  <view class="dig">商家馈赠</view>
+            </block>               
+                  <view class='pronum'>数量{{item.number}}</view>                
+            </view>   
+            <view class='procutline'></view>
+             <view  class="usershow" > 
+                <view class="userinfo">       
+                    <image id="{{item.wxuser.user_phone}}" catchtap="lookuser" class="userphoto" src="{{item.wxuser.photo}}"></image><text class="username">{{item.wxuser.nickname}}</text> 
+                </view>
+                <view class="city">{{item.city}}</view>   
+            </view>   
+            <!-- <view class="procutline"></view> -->
+             </view> 
+            </block>
+            
+        </block>
+       <!-- add -->
+        <block wx:if="{{counts%2==1}}">
+        <image bindtap='pub' class="proimg" mode="widthFix" src="../../images/addpro.png" ></image>  
+        </block>
+      </view>
+</view>
+
+<!-- 回到顶部 -->
+<view class='returntop' catchtap='returnTop'>
+<image src="../../images/top.png"></image>
+</view>
+<!-- pro -->
+
+<view class="loading" hidden="{{!loadingmore}}">加载更多...</view>
+<view class="loading" hidden="{{!loadingend}}">加载完成</view>
+</scroll-view>
+<!-- 发布 -->
+<!-- <view bindtap='pub' class="bot">
+    <view class="icon_pub">发布</view>
+
+</view> -->

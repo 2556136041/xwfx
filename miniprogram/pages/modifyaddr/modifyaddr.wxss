@@ -1,0 +1,25 @@
+/* pages/modifyaddr/modifyaddr.wxss */
+
+.con{
+  margin-top:30rpx;
+}
+
+input{
+  display: block;
+  width:80%;
+  height:100rpx;
+  padding:10rpx;
+  margin:20rpx auto; 
+  text-align: left;
+  border-radius: 10rpx;
+  border-bottom: 1px solid rgba(200,200,200,.5);
+
+}
+textarea{
+  width:80%;
+  height:100rpx;
+  padding:10rpx;
+  margin:20rpx auto; 
+  text-align: left;
+
+}

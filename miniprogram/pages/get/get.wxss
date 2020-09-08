@@ -1,0 +1,63 @@
+/* pages/give/give.wxss */
+page{
+  font-size:28rpx;
+  font-family: "黑体";
+  /* padding: 30rpx 10rpx; */
+}
+
+/* .prosList{
+  padding:20rpx 0;
+  border-bottom:1px solid rgb(100,100,100);
+} */
+.count{
+  margin-top:30rpx;
+  padding:0 0 15rpx 15px;
+
+}
+.backpic{
+  width: 100%;
+}
+.backpic image{
+  width: 80%;
+  display: block;
+  margin: 15rpx auto;
+  border-radius: 50rxp;
+}
+
+.about1,.getinfo{
+  width:100%;
+  margin: 15rpx auto;
+  background: white;
+  display: block;
+  color:black;
+  
+}
+.about1{
+  padding:0 0 15rpx 15px;
+  position: relative;
+  line-height: 40rpx;
+}
+.ordername,.pubname{
+  display: block;
+  text-align:left;
+  font-weight: 800;
+  margin-bottom:20rpx;
+}
+.about_item,.about_time{
+  padding-right: 15rpx;
+}
+.about_row{
+  display: block;
+  /* background:red; */
+  padding-right: 10%;
+  
+}
+
+.getinfo_item{
+  display: block;
+
+}
+
+.state{
+  text-align: center;
+}

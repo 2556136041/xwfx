@@ -1,0 +1,27 @@
+<!--pages/takephoto/takephoto.wxml-->
+
+<view style='position:relative;'>
+   <image class="bg" src='{{bg}}'></image>
+   <image class="icon" mode='widthFix' style='width:60rpx;' src='../../images/takephoto.png'></image>
+
+</view>
+
+<view class="box">
+    <view style="margin-bottom:20rpx;font-size:40rpx;font-weight:600;text-align:center">如何用手机拍照为你的宝贝加分？</view>
+    <view class="tit1">1、突出产品特色</view>
+          <view class="con">产品图片一般需要展示什么?以食品为例：新鲜度、色泽、食欲、产品本身具有的特点都是需要展示的。具体因产品而定。以绿茶为例，干茶的色泽，汤色的清澈，茶底的嫩度 都是需要逐步展示的。了解你所拍摄的产品特点是什么是第一步。</view>
+    <view class="tit1">2、拍照分全景图、细节图。全景看全貌，细节看细节。</view>
+    <view class="tit1">3、构图</view>
+         <view class="con">用九宫格模式构图，图片里的井字中，看着比较和谐。</view>
+    <view class="tit1">4、虚实</view>
+         <view class="con">拍的产品图如果只有一个产品，显得比较单调，这时候需要搭配背景，但是背景比较多，就会喧宾夺主。这时候拍照片的时候就要有虚实。专业相机可以通过调整参数来突出景深，手机么有那么专业，可以通过移动产品和背景的距离来完成。也就是产品靠近镜头一点，背景远一点。对焦的时候对着产品就可以了。</view>
+    <view class="tit1">5、光线</view>
+          <view class="con">光线对图片的影响因素比较大。在没有摄影棚的情况下，最合适的方法是运用自然光。拍照的时间以晴天的上午为宜，下午的阳光是偏黄色的，影响图片的效果。上午的比较亮。中午的过于刺眼。要注意的事，不要让阳光直接照射在产品上面。</view>
+    <view class="tit1">6、修图</view>
+          <view class="con">推荐用美图秀秀。可以运用井字格对图片进行裁切。可以调整亮度和色彩。可以抠图做白底图片。可以加边框。功能太多。基本能满足大家的需求。
+        　
+
+    </view>
+
+</view>
+　　

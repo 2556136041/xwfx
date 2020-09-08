@@ -1,0 +1,271 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+
+/* detail top */
+.bg{
+   width:100%;
+   height:100rpx;
+   opacity:0.5;
+}
+.icon{
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top:-30rpx;
+    z-indent:100;
+}
+
+/* ****** */
+/* pro展示，包括index,jj,cw,sj,yw,sp */
+/* .proscon{
+    margin:30rpx auto;
+    width: 95%;
+    padding:15rpx;
+    font-size: 28rpx;
+    font-family: "Microsoft Yahei";
+    font-weight: 600;
+}
+.proinfo{
+    column-count: 2;
+    column-gap: 30rpx;
+} */
+
+.pic{
+    background-color: #fff;
+    break-inside: avoid; 
+    box-sizing: border-box;
+    border-radius: 15rpx;
+    margin-bottom:30rpx;
+}
+.picbox{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background:white;
+    margin-bottom: 25rpx;
+    border-radius: 10rpx;
+    padding-bottom:10rpx;
+    
+}
+
+.proimg{
+    width: 100%;
+    border-top-left-radius:10rpx;
+    border-top-right-radius:10rpx;
+
+}
+
+.firstline{
+   width:100%;
+   margin: 10rpx auto;
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   /* background: red; */
+}
+
+.proname{
+  width:60%;
+  /* margin:0rpx auto; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size:30rpx;
+  font-weight: 600;
+  font-family: "黑体";
+  padding-left: 15rpx;
+}
+
+.looknums{
+  width: 40%;
+  /* background: green;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  text-align: right;
+  padding-right: 15rpx;
+  line-height: 30rpx;
+  /* background: yellow; */
+}
+.lovehits,.loveangle{
+  display: inline-block;
+}
+.lovehits{
+  font-size:26rpx;
+  line-height: 30rpx;
+  margin-right:10rpx;
+  color:black;
+  /* background: green; */
+  vertical-align: top;
+  
+}
+.loveangle{
+   width:35rpx;
+   height: 30rpx;
+   line-height: 30rpx;
+   /* background: red; */
+   /* border-radius:50%;     */
+}
+
+.about{
+  width:100%;
+  margin: 10rpx auto;
+  /* background:green; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color:#3380EB;
+  font-weight: 100;
+  font-size:26rpx;
+  font-family: "Microsoft Yahei";
+  /* border-bottom:1px solid rgba(220,220,220,0.5);
+  border-bottom-width:90%; */
+  padding-bottom: 10rpx;
+
+}
+
+.tel,.dig{
+   width: 40%;
+}
+
+.dig{
+  width:100%;
+  height:100%;
+  border-radius:20rpx;
+  text-align:center;
+  color:white;
+  font-weight:600;
+  background:rgb(224,98,13); 
+}
+.pronum{
+  width: 60%;
+  text-align: right;
+  padding-right: 15rpx;
+}
+
+.tel{
+  text-align: left;
+  padding-left: 15rpx;
+  
+}
+
+.usershow{   
+   /* z-index: 100;
+   position: absolute;
+   bottom:15rpx;
+   left:20rpx; */
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: left;
+   align-items: center;
+   padding-top: 10rpx;
+}
+.userinfo{
+   width:70%;
+   padding-left: 15rpx;
+   display: flex;
+   flex-direction: row;
+   justify-content: left;
+   align-items: center;
+   /* background:red; */
+   
+}
+.userphoto,.username{
+  display: inline-block;
+}
+.username{
+  font-size:30rpx;
+  text-align: left;
+  margin-left:10rpx;
+  color:black;  
+  display: inline-block;
+  width: 150rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+.userphoto{
+   width:50rpx;
+   height: 50rpx;
+   border-radius:50%;    
+   
+}
+
+.city{
+   width:30%;
+   font-size:26rpx;
+   font-weight:300;
+   color:rgb(50,50,50);
+   text-align:right;
+   /* background: yellow; */
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   padding-right: 15rpx;
+}
+
+
+.procutline{
+    width:90%;
+    height:1px;
+    background:rgba(220,220,220,0.7);
+    margin:5rpx auto;
+}
+
+/* ****** */
+
+/* 加载提示 */
+.loading{
+   color: #0380EB;
+   text-align: center;
+   padding:10rpx;
+   font-size:28rpx;
+   
+}
+.gray{
+   color:red;
+}
+
+/* 回到顶部样式*/
+movable-area{
+   height: 100rpx;
+   width: 200rpx;
+   /* background: blue; */
+   position:fixed;
+   right:30rpx;
+   bottom:30rpx;
+
+}
+
+movable-view{
+    height: 100rpx; 
+    width: 100rpx; 
+    /* background: yellow; */
+}
+
+.returntop{
+  z-index: 1000;
+  background:white;
+  border-radius:50%;
+  border:1px solid rgba(200,200,200,.5);
+  line-height:100rpx;
+  text-align:center;
+}
+
+.returntop image{
+    width:60rpx;
+    height:60rpx;
+    border-radius:50%;
+    position:relative;
+    top:20rpx;
+}

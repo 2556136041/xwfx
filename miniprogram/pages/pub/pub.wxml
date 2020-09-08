@@ -1,0 +1,71 @@
+
+
+<view class="upload_box" style='padding:50rpx 0rpx;position:absolute;width:100%;"'>
+
+<view class="tj">亲，手机务必真实，以便领取者联系你</view>
+
+<view>
+
+<view style="margin-top:20rpx;padding:20rpx 0rpx 0rpx 20rpx;color:red;">
+<text bindtap="takephoto">手机拍照攻略（为你的宝贝加分）</text>
+
+
+</view>
+
+<view class="takephoto">
+ <image style="display:block;width:100rpx;height:100rpx;" bindtap="uploadimg" src='../../images/upload1.png'></image>
+ <text style='display:block;'>点击拍照</text>
+
+</view>
+
+ <!-- <view style='font-size:25rpx;text-align:center;color:#338EDB'>苹果系统直接拍照，安卓系统使用手机相册照片</view> -->
+<!-- <button type='' bindtap="uploadimg">点击选择上传图</button> -->
+ 
+</view>
+<!-- del -->           
+<view class='delimg' hidden='{{imgflag}}'  id="{{pic}}" bindtap="delimg">
+      <!-- <image mode='widthFix' src="../../images/shanchu.png" style='width:60rpx;'></image> -->
+      <icon type="clear" size="40" color="rgb(200,200,200)" />
+</view>
+<image hidden='{{imgflag}}' mode='widthFix'  src='{{source}}' style='display:{{flag}};margin:0 auto;width:600rpx;' />
+<!-- <image src="https://www.szfyxhm.com/Public/images/pro/{{pic}}"></image> -->
+<form bindsubmit="formSubmit">  
+   
+   <picker  bindchange="bindPickerChange1" value="{{digindex}}" range="{{digarray}}">
+    <view class="picker">
+      以何身份（点击选择）：<text style='color:#3380EB;'>{{digarray[digindex]}}</text>
+    </view>
+  </picker>
+   <input maxlength='20' bindfocus='focus' placeholder="名称" type="text" name="proname" value="{{searchinput}}" /> 
+  <picker  bindchange="bindPickerChange2" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      类别（点击选择）：<text style='color:#3380EB;'>{{array[index]}}</text>
+    </view>
+  </picker>
+   <input maxlength='10' bindfocus='focus' placeholder="数量" type="number" name="pronumber" value="{{searchinput}}" /> 
+    <picker  bindchange="bindPickerChange3" value="{{useindex}}" range="{{usearray}}">
+    <view class="picker">
+      时长（点击选择）：<text style='color:#3380EB;'>{{usearray[useindex]}}</text>
+    </view>
+  </picker>
+   <textarea bindfocus='focus' maxlength='200' placeholder="我和这件物品的故事（含规格、价值等）,200字以内" name="proabout" value="{{searchinput}}" /> 
+    <view style='width:80%;height:30rpx;margin:0 auto;'></view>
+  <view style="width:80%;margin:0 auto;display:flex;flex-direction:row;justify-content:left;align-items: center;">
+       <image bindtap="getlocation" mode='widthFix' style='width:50rpx;padding-right:10rpx;' src="../../images/dizhi.png"></image>
+       <text>所在城市(点击图标获取)：{{city}}</text>        
+  </view>
+   <!-- <input bindfocus='focus' placeholder="发布人" type="text" name="username" value="{{searchinput}}" />   
+   <input maxlength='11' bindfocus='focus' placeholder="手机号" type="number" name="tel" value="{{searchinput}}" /> 
+   <block wx:if="{{useraddress==''}}">
+    <input maxlength='100' bindfocus='focus' placeholder="详细地址" type="text" name="address" value="" /> 
+   </block>
+   <block wx:else>
+   <input maxlength='100' bindfocus='focus' placeholder="详细地址" type="text" name="address" value="{{useraddress}}" />
+   </block> -->
+   <view class="address" bindtap='selectaddr'><image mode='widthFix' style="width:50rpx;padding-right:10rpx;" src="../../images/selectaddr.png" ></image><text>选择您的联系方式及地址</text></view>
+   <view style='width:80%;margin:20rpx auto;'>{{myaddr}}</view>
+  <button class="btn" disabled='{{btnflag}}' formType="submit" type='primary'> 发布 </button>
+ </form>
+  <view style="font-size:30rpx;color:red;text-align:center;margin:40rpx 0rpx;" hidden='{{sendmesflag}}'>请随时关注我主页领取状态</view>
+
+ </view>

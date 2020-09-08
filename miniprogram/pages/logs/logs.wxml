@@ -1,0 +1,60 @@
+
+
+<scroll-view style='height: {{winHeight}}px' scroll-y bindscroll="scroll">
+
+
+
+  <view class='search'>
+    <view class='redLayer' style='opacity: {{opacity}}'></view>
+    <view class='box'>
+      <view class='content'>
+        <view class='left'>
+
+        <form>
+            <image src='{{search[0]}}'></image>
+            <image class='search-icon' src='{{search[1]}}'></image>
+            <view class='input'>
+              <input maxlength='10' placeholder='请输入要'></input>          
+            </view>
+        </form>
+
+        </view>
+        <view class='right'>登录</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view>
+    <swiper autoplay interval='{{interval}}' duration='{{duration}}' indicator-dots indicator-active-color='{{activeColor}}'>
+      <block wx:for="{{img.swiperImg}}" wx:key="u">
+        <swiper-item>
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="grid">  
+    <view class="grid-list" wx:for="{{img.gridImg}}" wx:key="uni">  
+      <image class="grid-img" src="{{item}}" />  
+      <view class="grid-title">{{img.gridTitle[index]}}</view>  
+    </view>  
+  </view>  
+
+  <view class='sign'>
+    <image src='{{contentImg}}'></image>
+  </view> 
+
+  <view class='sign'>
+    <image src='{{contentImg}}'></image>
+  </view> 
+  <view class='sign'>
+    <image src='{{contentImg}}'></image>
+  </view> 
+  <view class='sign'>
+    <image src='{{contentImg}}'></image>
+  </view> 
+
+</scroll-view>
+

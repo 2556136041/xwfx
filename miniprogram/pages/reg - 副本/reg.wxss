@@ -1,0 +1,102 @@
+
+page{
+
+   font-family: "黑体";
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+.window {
+  width: 50%;
+  padding: 20rpx;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 20rpx;
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+}
+
+
+image{
+  width:100%;
+}
+page {
+  background: #f2f2f2;
+}
+
+.logo image {
+  height: 350rpx;
+  width: 750rpx;
+}
+
+.user, .password, .code {
+  background: #fff;
+  display: flex;
+  height: 100rpx;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+.login {
+  padding: 20px 15px;
+  margin-top: 80rpx;
+
+}
+
+.placeholder {
+  font-size: 30rpx;
+  color: #ccc;
+}
+
+.login image {
+  height: 30px;
+  width: 30px;
+  margin: 20rpx 22rpx;
+}
+
+.password image {
+  height: 30px;
+  width: 30px;
+  margin: 20rpx 23rpx;
+}
+
+input {
+  height: 100rpx;
+  line-height: 100rpx;
+
+}
+
+.code {
+  /* width: 600rpx;   */
+  position: relative;
+  margin-top:30rpx;
+}
+
+.code button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 98rpx;
+  width: 100rpx;
+  padding: 0;
+  margin: 0;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  background: rgba(0, 0, 0, .2);
+  color: #fff;
+}
+
+.register button {
+  margin-top: 50rpx;
+  width: 100%;
+}
+

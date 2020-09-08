@@ -1,0 +1,81 @@
+/* pages/upload/upload.wxss */
+page{
+  font-size: 28rpx;
+  font-family: "黑体";
+}
+.tj{
+   /* background:#FECB43; */
+   /* background:#33cc33; */
+   background:#ccffcc;
+   width:100%;
+   height: 50rpx;
+   line-height: 50rpx;
+   padding-left:20rpx;
+   font-size:26rpx;
+   position: fixed;
+   left:0px;
+   top:0px;
+   color:rgb(100,100,100);
+   font-weight: 500;
+
+}
+.takephoto{
+   margin:90rpx auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size:25rpx;
+}
+
+.delimg{
+   text-align: right;
+   padding-right: 20rpx;
+}
+.uploadbox{
+   padding-right: 10rpx;
+
+}
+input{
+  display: block;
+  width:80%;
+  height:100rpx;
+  padding:10rpx;
+  border-bottom:1px solid rgba(200,200,200,.6); 
+  margin:20rpx auto; 
+  /* border-radius: 10rpx; */
+}
+.picker{
+   width: 80%;
+   margin:20rpx auto;
+}
+textarea{
+  width: 80%;
+  /* border:1px solid gray; */
+  margin:20rpx auto;
+  padding:10rpx;
+}
+
+.address{
+  width: 80%;
+  /* border:1px solid gray; */
+  margin:20rpx auto;
+  padding:10rpx;
+  display:flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+
+}
+.toindex{
+  /* margin:30rpx 0rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom:100rpx; */
+}
+
+.btn{
+  margin-top:100rpx;
+}
+
+

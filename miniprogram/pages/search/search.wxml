@@ -1,0 +1,78 @@
+<wxs module="phone"> 
+var toHide = function(array) {
+ var mphone = array.substring(0, 3) + '****' + array.substring(7); return mphone;
+  } 
+  module.exports.toHide = toHide; 
+</wxs>
+<!-- <image style=' width:100%;height:150px;' src="https://www.51mfgs.com/public/static/images/miniprogram/fm1.jpg"></image> -->
+<view class='search'>
+    <view class='redLayer' style='opacity: {{opacity}}'></view>
+    <view class='box'>
+      <view class='info'>
+      <form bindsubmit="search">
+        <view class='left'>
+          <image mode='widthFix' src='{{search[0]}}' style='width:50rpx;padding-left:5px;'></image>
+          <image mode='widthFix' class='search-icon' src='{{search[1]}}' style='width:18px;height:18px;padding-left:5px;'></image>
+          <view class='input'>
+            <input bindfocus='focus' class='inp' name="keyword" bindblur='blur' type='search' bindconfirm='confirm' type='search' maxlength='10' placeholder='{{searchinput}}'></input>     
+          </view>
+        </view>
+        <view class="right">
+        <button formType="submit" class="btn" type="" size="mini">搜索</button>
+        </view>    
+        </form>
+      </view>
+    </view>
+  </view>
+
+  <!-- pro -->
+<view class="proscon">
+  <view class="proinfo">
+      <view hidden='{{!flag}}' class="prosList" wx:for="{{data}}" id="{{index}}" wx:key="i">
+
+      <view class="pic">
+          <view class="picbox">
+               <image  bindtap='detail' id="{{item.pro_id}}"  class="proimg" mode="widthFix" src="https://www.51mfgs.com/public/static/images/pro/{{item.pro_pic}}"></image> 
+
+                    <!-- <view  class="usershow" >       
+                    <image id="{{item.wxuser.user_phone}}" catchtap="lookuser" class="userphoto" src="{{item.wxuser.photo}}"></image><text class="username">{{item.wxuserinfo.nickname}}</text> 
+                    </view>
+
+                    <view  class="love" >       
+                    <text class="lovehits">{{item.hits}}</text> <image id="{{item.hits}}" class="loveangle" src="../../images/xin1.png"></image>
+                    </view>
+              
+          </view> -->
+                
+           <view class="firstline">
+                <view class='proname'>{{item.pro_name}} </view> 
+                <view class='looknums'><text class="lovehits">{{item.hits}}</text> <image id="{{item.hits}}" class="loveangle" src="../../images/xin1.png"></image></view>
+                <!-- <view class="city">{{item.city}}</view>             -->
+            </view>
+            
+            <view class="about">
+            <block wx:if="{{item.user_dig==0}}">                
+                  <view class="tel">{{phone.toHide(item.tel)}}</view>
+            </block>
+            <block wx:elif="{{item.user_dig==1}}">  
+                  <view class="dig">商家馈赠</view>
+            </block>               
+                  <view class='pronum'>数量{{item.number}}</view>                
+            </view>   
+            <view class='procutline'></view>
+             <view  class="usershow" > 
+                <view class="userinfo">       
+                    <image id="{{item.wxuser.user_phone}}" catchtap="lookuser" class="userphoto" src="{{item.wxuser.photo}}"></image><text class="username">{{item.wxuser.nickname}}</text> 
+                </view>
+                <view class="city">{{item.city}}</view>   
+            </view>   
+            <!-- <view class="procutline"></view> -->
+             </view> 
+        </view>
+    
+
+      </view>        
+
+  </view>
+
+</view>
